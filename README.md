@@ -1,4 +1,4 @@
-Full-stack messenger App
+## Full-stack messenger App
 
 Technologies used: 
  - React.js
