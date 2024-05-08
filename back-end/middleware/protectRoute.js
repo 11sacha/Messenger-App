@@ -11,7 +11,7 @@ const protectRoute = async (req, res, next) => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         if(!decoded) {
-            return res.status(401).json({ error: "Error 2: Unauthorized - No Token Provided" });
+            return res.status(401).json({ error: "Error 2: Unauthorized - Invalid Provided" });
         }
 
         const user = await User.findById(decoded.userId).select("-password");
