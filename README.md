@@ -1,4 +1,4 @@
-## Full-stack Imessenger App
+## Full-stack iMessenger App
 
 Technologies used: 
  - React.js
