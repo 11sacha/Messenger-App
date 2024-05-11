@@ -17,7 +17,7 @@ const SignUp = () => {
             <input 
               type="text" 
               placeholder='Enter full name' 
-              className='w-full input input-bordered h-10'
+              className='w-full input input-bordered h-10 text-black'
             />
           </div>
 
@@ -28,7 +28,7 @@ const SignUp = () => {
             <input 
               type="text" 
               placeholder='Enter username' 
-              className='w-full input input-bordered h-10' />
+              className='w-full input input-bordered h-10 text-black' />
           </div>
 
           <div>
@@ -36,9 +36,9 @@ const SignUp = () => {
               <span className='text-base label-text text-white'>Password</span>
             </label>
             <input 
-              type="text" 
+              type="password" 
               placeholder='Enter password' 
-              className='w-full input input-bordered h-10' />
+              className='w-full input input-bordered h-10 text-black' />
           </div>
 
           <div>
@@ -46,9 +46,9 @@ const SignUp = () => {
               <span className='text-base label-text text-white'>Confirm Password</span>
             </label>
             <input 
-              type="text" 
+              type="password" 
               placeholder='Enter password confirmation' 
-              className='w-full input input-bordered h-10' />
+              className='w-full input input-bordered h-10 text-black' />
           </div>
 
           <GenderCheckBox/>
@@ -58,7 +58,7 @@ const SignUp = () => {
           </a>
 
           <div>
-            <button className='btn btn-block btn-sm mt-2 border text-white'>Sign Up</button>
+            <button className='btn btn-block btn-sm mt-2 border'>Sign Up</button>
           </div>
 
         </form>
