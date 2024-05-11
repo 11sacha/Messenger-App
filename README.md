@@ -6,3 +6,6 @@ Technologies used:
  - Node.js
  - Express
  - MongoDB
+ - JWT
+ - Socket.io
+ - Zustand
