@@ -7,7 +7,7 @@ const Conversation = () => {
             <div className='avatar online'>
                 <div className='w-12 rounded-full'>
                     <img 
-                        src="https://www.google.com/imgres?q=profile%20user%20contact&imgurl=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fui-colored-1-of-3%2F100%2FUI_1__11-512.png&imgrefurl=https%3A%2F%2Fwww.iconfinder.com%2Ficons%2F1516678%2Faccount_contact_person_profile_representation_user_icon&docid=o43iJSDg1kS2DM&tbnid=syg_3XDuyZ40hM&vet=12ahUKEwjqp7W8_IWGAxXTrpUCHb-oDioQM3oECGQQAA..i&w=512&h=512&hcb=2&ved=2ahUKEwjqp7W8_IWGAxXTrpUCHb-oDioQM3oECGQQAA" 
+                        src="https://cdn0.iconfinder.com/data/icons/communication-line-10/24/account_profile_user_contact_person_avatar_placeholder-512.png" 
                         alt="user avatar" 
                     />
                 </div>
