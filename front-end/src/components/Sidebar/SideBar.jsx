@@ -5,11 +5,15 @@ import LogOutButton from './LogOutButton'
 
 const SideBar = () => {
   return (
-    <div>
+    <div className='relative h-full border-r-2 border-gray-500'>
       <SearchInput />
-      <div className='divider px-3'></div>
-      <Conversations />
-      <LogOutButton />
+      <div className='divider px-2 my-1'></div>
+      <div className='overflow-y-auto h-full pb-16'>
+        <Conversations />
+      </div>
+      <div className='absolute bottom-0 px-3 py-3 my-2 w-full'>
+        <LogOutButton />
+      </div>
     </div>
   )
 }
