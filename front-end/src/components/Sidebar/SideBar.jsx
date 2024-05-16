@@ -11,7 +11,7 @@ const SideBar = () => {
       <div className='overflow-y-auto h-full pb-16'>
         <Conversations />
       </div>
-      <div className='absolute bottom-0 px-3 py-3 my-2 w-full'>
+      <div className='absolute bottom-0 px-3 py-2 w-full'>
         <LogOutButton />
       </div>
     </div>
