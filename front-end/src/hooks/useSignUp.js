@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const useSignUp = () => {
   const [loading, setLoading] = useState(false);
@@ -11,12 +12,13 @@ const useSignUp = () => {
     setLoading(true);
     try {
         const res = await fetch("http://localhost:1234/api/auth/signup", {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ fullname, username, password, confirmPass, gender })
         });
 
-        const data = await res.json();
+        const data = await res.data;
+        toast.success('Sign Up successful!')
     } catch (error) {
         toast.error(error.message);
         console.log(error.message)
@@ -47,3 +49,13 @@ function handleInputErrors({fullname, username, password, confirmPass, gender}) 
     }
     return true;
 }
+
+
+// const res = await fetch("http://localhost:1234/api/auth/signup", {
+//             method: "POST",
+//             headers: { "Content-Type": "application/json" },
+//             body: JSON.stringify({ fullname, username, password, confirmPass, gender })
+//         });
+// const res = await axios.post("http://localhost:1234/api/auth/signup",
+//             { fullname, username, password, gender }
+//         );
