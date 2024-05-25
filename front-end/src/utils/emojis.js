@@ -55,6 +55,8 @@ export const funEmojis = [
 	"🧘",
 ];
 
-export const getRandomEmoji = () => {
+const getRandomEmoji = () => {
 	return funEmojis[Math.floor(Math.random() * funEmojis.length)];
 };
+
+export default getRandomEmoji;
