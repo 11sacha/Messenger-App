@@ -10,6 +10,14 @@ const io = new Server(server, {
         origin: ['http://localhost:5173/'],
         methods: ['GET', 'POST']
     }
-})
+});
 
-export { app }
+io.on("connection", (socket) => {
+    console.log("a user connected", socket.id);
+
+    socket.on("disconnect", () => {
+        console.log("user disconnected", socket.id)
+    });
+});
+
+export { app, io, server }

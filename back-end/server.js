@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import { app } from './socket/socket.js'
+import { app, server } from './socket/socket.js'
 import cookieParser from "cookie-parser";
 dotenv.config()
 import cors from 'cors';
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
     res.send("Hello world!")
 })
 
-app.listen(port, async () => {
+server.listen(port, async () => {
     await connectToMongoDB();
     console.log(`Server running on port ${port}`)
 })
