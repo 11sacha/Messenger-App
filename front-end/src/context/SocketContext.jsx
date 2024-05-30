@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState, useContext } from "react";
 import { useAuthContext } from "./AuthContext";
-import { use } from "express/lib/application";
-import { query } from "express";
+import io from 'socket.io-client'
 
 export const SocketContext = createContext();
 
@@ -38,6 +37,6 @@ export const SocketContextProvider = ({ children }) => {
     }, []);
 
     return (
-        <SocketContext.Provider value={{socket, onlineUser}}>{children}</SocketContext.Provider>
+        <SocketContext.Provider value={{socket, onlineUsers}}>{children}</SocketContext.Provider>
     )
 };
