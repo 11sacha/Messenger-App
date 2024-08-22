@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import toast from 'react-hot-toast';
-import axios from 'axios';
 import { useAuthContext } from '../context/AuthContext';
 
 const useSignUp = () => {
@@ -9,6 +8,10 @@ const useSignUp = () => {
   console.log('pase las constantes')
 
   const signup = async({ fullname, username, password, confirmPass, gender }) => {
+    console.log(fullname);
+    console.log(username);
+    console.log(password);
+    console.log(confirmPass);
     const success = handleInputErrors({fullname, username, password, confirmPass, gender});
     if (!success) return;
     
@@ -17,7 +20,7 @@ const useSignUp = () => {
         const res = await fetch("http://localhost:1234/api/auth/signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ fullname, username, password, confirmPass, gender })
+            body: JSON.stringify({fullname, username, password, confirmPass, gender} )
         });
         console.log('pase el fetch')
 
@@ -55,7 +58,7 @@ function handleInputErrors({fullname, username, password, confirmPass, gender}) 
     }
 
     if(password !== confirmPass) {
-        toast.error('Passwords do not match.');
+        toast.error('Passwords do not match123.');
         return false
     }
 
