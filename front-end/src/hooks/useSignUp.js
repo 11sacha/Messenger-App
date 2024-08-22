@@ -22,6 +22,7 @@ const useSignUp = () => {
         const data = await res.data;
         if(data.error) { 
             throw new Error(data.error)
+            console.log('Error en la data')
         }
 
         localStorage.setItem("chat-user", JSON.stringify(data));
@@ -30,8 +31,9 @@ const useSignUp = () => {
         toast.success('Sign Up successful!');
         
     } catch (error) {
+        console.log('Error en el sign up')
         toast.error(error.message);
-        console.log(error.message)
+        console.log(error.message);
     } finally {
         setLoading(false)
     }

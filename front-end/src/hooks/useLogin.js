@@ -6,14 +6,16 @@ const useLogIn = () => {
     const [loading, setLoading] = useState(false);
     const { setAuthUser } = useAuthContext();
 
-    const login = async (username, password) => {
+    const login = async ({username, password}) => {
+        // console.log(username);
+        // console.log(password);
         const success = handleInputErrors(username, password);
         if (!success) return;
 
         setLoading(true);
 
         try {
-            const res = await fetch("/api/auth/login", {
+            const res = await fetch("http://localhost:1234/api/auth/login", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({ username, password })
@@ -38,9 +40,10 @@ const useLogIn = () => {
 
 function handleInputErrors(username, password) {
     if(!username || !password) {
-        toast.error('Please fill in all fields.')
+        toast.error('Please type your credentials')
         return false
     }
+   
     return true;
 };
 
