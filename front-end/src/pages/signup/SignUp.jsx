@@ -30,8 +30,8 @@ const SignUp = () => {
     <div className='flex flex-col items-center justify-center space-between max-w-[475px] mx-auto' style={{ width: 'clamp(300px, 50%, 600px)' }}>
       <div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 transition-all duration-300 ease-in-out'>
         <h1 className='sm:text-xl md:text-2xl lg:text-3xl font-semibold text-center text-white'>
+          <span className='text-customBlue pr-3 sm:text-xl md:text-2xl lg:text-3xl'>iMessenger</span>
           Sign Up
-          <span className='text-customBlue pl-3 sm:text-xl md:text-2xl lg:text-3xl'>iMessenger</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
