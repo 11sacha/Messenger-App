@@ -26,11 +26,11 @@ const LogIn = () => {
               <span className='text-base label-text text-white'>Username</span>
             </label>
             <input
-              value={username} 
-              type="text" 
-              placeholder='Enter Username' 
-              className='w-full input input-bordered h-10 text-black' 
-              onChange={(e) => setUsername(e.target.value)}
+                value={username} 
+                type="text" 
+                placeholder='Enter Username' 
+                className='w-full input input-bordered h-10 text-black' 
+                onChange={(e) => setUsername(e.target.value)}
             />
           </div>
 
@@ -39,11 +39,11 @@ const LogIn = () => {
               <span className='text-base label-text text-white'>Password</span>
             </label>
             <input
-              value={password}
-              type="password" 
-              placeholder='Enter Password' 
-              className='w-full input input-bordered h-10 text-black'
-              onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                type="password" 
+                placeholder='Enter Password' 
+                className='w-full input input-bordered h-10 text-black'
+                onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <Link to={'/signup'} className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'>

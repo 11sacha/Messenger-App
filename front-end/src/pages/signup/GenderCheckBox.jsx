@@ -1,5 +1,3 @@
-import React from 'react'
-
 const GenderCheckBox = ({ onCheckboxChange, selectedGender }) => {
   return (
     <div className='flex  mb-2 mt-4'>
