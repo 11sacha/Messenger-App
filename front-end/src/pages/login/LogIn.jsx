@@ -17,8 +17,8 @@ const LogIn = () => {
     <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
       <div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
         <h1 className='text-3xl font-semibold text-center text-white'>
+          <span className='text-customBlue pr-3 sm:text-2xl md:text-3xl lg:text-4xl'>iMessenger</span>
           Log In  
-          <span className='text-blue-600 pl-3'>iMessenger</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>

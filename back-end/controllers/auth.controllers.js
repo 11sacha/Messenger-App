@@ -4,11 +4,12 @@ import generateToken from '../utils/generateJwt.js'
 
 export const signUp = async (req, res) => {
     try {
+        console.log(req.body);
         const {fullName, username, password, passwordConfirm, gender} = req.body;
 
-        if(password !== passwordConfirm){
-            return res.status(400).json({error: "Passwords don't match."})
-        }
+        // if(password !== passwordConfirm){
+        //     return res.status(400).json({error: "Passwords don't match."})
+        // }
         const user = await User.findOne({username});
 
         if (user) {
@@ -52,6 +53,7 @@ export const signUp = async (req, res) => {
 export const logIn = async (req, res) => {
     try {
         const { username, password } =req.body;
+        console.log(req.body);
         const user = await User.findOne({ username });
         const validPassword = await bcrypt.compare(password, user?.password || "");
 

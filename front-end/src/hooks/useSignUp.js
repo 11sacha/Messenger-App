@@ -7,7 +7,11 @@ const useSignup = () => {
 	const { setAuthUser } = useAuthContext();
 
 	const signup = async ({ fullName, username, password, confirmPassword, gender }) => {
-		const success = handleInputErrors({ fullName, username, password, confirmPassword, gender });
+		console.log(fullName);
+		console.log(username);
+		console.log(password);
+		console.log(confirmPassword);
+		const success = handleInputErrors(fullName, username, password, confirmPassword, gender);
 		if (!success) return;
 
 		setLoading(true);
@@ -35,7 +39,7 @@ const useSignup = () => {
 };
 export default useSignup;
 
-function handleInputErrors({ fullName, username, password, confirmPassword, gender }) {
+function handleInputErrors(fullName, username, password, confirmPassword, gender) {
 	if (!fullName || !username || !password || !confirmPassword || !gender) {
 		toast.error("Please fill in all fields");
 		return false;
